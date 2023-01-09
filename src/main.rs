@@ -54,6 +54,16 @@ fn main() {
 
     println!("{}", band_name);
 
+    let scope_test = "outer scope";
+    println!("1-{}", scope_test);
+    // a scope
+    {
+        // shadowing
+        let scope_test = "inner scope";
+        println!("2-{}", scope_test);
+    }
+    println!("3-{}", scope_test);
+
     let unused_variable = "test";
     let _unused_variable_with_prefix = "test2";
     println!("Hello, world!");
